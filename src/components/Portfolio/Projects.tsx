@@ -1,3 +1,5 @@
+import { GlowCard } from "@/components/ui/GlowCard";
+
 interface Project {
   title: string;
   description: string;
@@ -34,41 +36,43 @@ export function Projects() {
         
         <div className="grid gap-8 md:gap-12">
           {projects.map((project, index) => (
-            <div 
+            <GlowCard
               key={index}
-              className="group bg-surface/50 rounded-lg p-8 border border-border hover-lift"
+              className="hover-lift"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex flex-col md:flex-row md:items-start gap-6">
-                <div className="flex-1">
-                  <h3 className="text-xl font-medium mb-3">{project.title}</h3>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech) => (
-                      <span 
-                        key={tech}
-                        className="px-3 py-1 text-xs bg-muted rounded-md text-muted-foreground font-medium"
+              <div className="p-8">
+                <div className="flex flex-col md:flex-row md:items-start gap-6">
+                  <div className="flex-1">
+                    <h3 className="text-xl font-medium mb-3">{project.title}</h3>
+                    <p className="text-muted-foreground mb-4 leading-relaxed">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tech.map((tech) => (
+                        <span 
+                          key={tech}
+                          className="px-3 py-1 text-xs bg-muted rounded-md text-muted-foreground font-medium"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {project.link && (
+                    <div className="flex-shrink-0">
+                      <a 
+                        href={project.link}
+                        className="inline-flex items-center text-sm font-medium text-primary hover:text-secondary transition-colors duration-200"
                       >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                        View Project →
+                      </a>
+                    </div>
+                  )}
                 </div>
-                
-                {project.link && (
-                  <div className="flex-shrink-0">
-                    <a 
-                      href={project.link}
-                      className="inline-flex items-center text-sm font-medium text-primary hover:text-secondary transition-colors duration-200"
-                    >
-                      View Project →
-                    </a>
-                  </div>
-                )}
               </div>
-            </div>
+            </GlowCard>
           ))}
         </div>
       </div>

@@ -4,10 +4,12 @@ import { Skills } from "@/components/Portfolio/Skills";
 import { Experience } from "@/components/Portfolio/Experience";
 import { Connect } from "@/components/Portfolio/Connect";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { GridGlow } from "@/components/ui/GridGlow";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background grid-background">
+      <GridGlow />
       <ThemeToggle />
       
       <main className="relative">

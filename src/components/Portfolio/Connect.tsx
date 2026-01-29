@@ -1,4 +1,5 @@
 import { Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { GlowCard } from "@/components/ui/GlowCard";
 
 const socialLinks = [
   {
@@ -45,14 +46,18 @@ export function Connect() {
             <a
               key={link.name}
               href={link.href}
-              className="flex items-center gap-4 p-6 bg-surface/50 rounded-lg border border-border hover-lift group"
+              className="block"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <link.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors duration-200" />
-              <div className="text-left">
-                <div className="font-medium text-sm">{link.name}</div>
-                <div className="text-muted-foreground text-sm">{link.label}</div>
-              </div>
+              <GlowCard className="hover-lift h-full">
+                <div className="flex items-center gap-4 p-6 group">
+                  <link.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors duration-200" />
+                  <div className="text-left">
+                    <div className="font-medium text-sm">{link.name}</div>
+                    <div className="text-muted-foreground text-sm">{link.label}</div>
+                  </div>
+                </div>
+              </GlowCard>
             </a>
           ))}
         </div>
