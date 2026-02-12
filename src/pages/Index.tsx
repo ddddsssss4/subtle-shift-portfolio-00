@@ -29,7 +29,7 @@ const Index = () => {
         
         <footer className="max-w-4xl mx-auto px-6 py-12 text-center animate-emerge" style={{ animationDelay: "1.3s" }}>
           <p className="text-sm text-muted-foreground">
-            © 2024 Your Name. Built with React & TypeScript.
+            © 2026 @OpsCode. Built with great taste in minimalism.
           </p>
         </footer>
       </main>
