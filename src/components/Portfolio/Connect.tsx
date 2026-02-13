@@ -5,26 +5,26 @@ const socialLinks = [
   {
     name: "Email",
     icon: Mail,
-    href: "mailto:your.email@example.com",
-    label: "your.email@example.com"
+    href: "mailto:opscode90@gmail.com",
+    label: "opscode90@gmail.com"
   },
   {
     name: "GitHub",
     icon: Github,
-    href: "https://github.com/yourusername",
-    label: "github.com/yourusername"
+    href: "https://github.com/ddddsssss4",
+    label: "github.com/ddddsssss4"
   },
   {
     name: "LinkedIn",
     icon: Linkedin,
-    href: "https://linkedin.com/in/yourusername",
-    label: "linkedin.com/in/yourusername"
+    href: "https://www.linkedin.com/in/opscode-690404236/",
+    label: "linkedin.com/in/OpsCode/"
   },
   {
     name: "Twitter",
     icon: Twitter,
-    href: "https://twitter.com/yourusername",
-    label: "@yourusername"
+    href: "https://x.com/OpsCode3",
+    label: "@OpsCode3"
   }
 ];
 
