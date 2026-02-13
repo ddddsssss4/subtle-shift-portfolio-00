@@ -24,15 +24,28 @@ const ICON_SLUGS: Record<string, string> = {
   Storybook: "storybook",
   Figma: "figma",
   "CSS-in-JS": "styled-components",
-  PostgreSQL: "postgresql",
   MongoDB: "mongodb",
   Redis: "redis",
   MySQL: "mysql",
   Express: "express",
-  "Node.js": "node.js",
+  "Node.js": "nodedotjs",
   "React Native": "react",
   Vite: "vite",
-  CSS:"css"
+  CSS: "css",
+  Javascript: "javascript",
+  "React.js": "react",
+  "JSON-RPC": "json",
+  "Solana Web3.js": "solana",
+  BIP39: "bitcoin",
+  ED25519: "gnuprivacyguard",
+  TweetNacl: "javascript",
+  "Database TypeScript": "typescript",
+  ReactFlow: "react",
+  "ethers.js": "ethereum",
+  "@solana/web3.js": "solana",
+  Hono: "hono",
+  Tailwind: "tailwindcss",
+  "Cloudflare Workers": "cloudflare",
 };
 
 /** Fallback slug generator for less-common names */
@@ -72,25 +85,25 @@ function TechIcon({ tech, size = 16 }: { tech: string; size?: number }) {
 
 const projects: Project[] = [
   {
-    title: "E-commerce Platform",
+    title: "Web3 Wallet Management App",
     description:
-      "A modern e-commerce solution built with React and TypeScript. Features include product catalog, shopping cart, and secure checkout.",
-    tech: ["React", "TypeScript", "Tailwind CSS", "Stripe"],
-    link: "#",
+      "Built a Web3 wallet app enabling multi-wallet management with secure key phrase generation. Integrated JSON-RPC and Solana Web3.js for real-time balances and key pair generation. Implemented BIP39 mnemonic-to-seed and ED25519 derivation for strong cryptographic security.",
+    tech: ["Javascript", "React.js", "JSON-RPC", "Solana Web3.js", "BIP39", "ED25519", "TweetNacl"],
+    link: "https://github.com/yourusername/n8nWeb3",
   },
   {
-    title: "Task Management App",
+    title: "n8nWeb3",
     description:
-      "A minimal task management application with drag-and-drop functionality and real-time collaboration features.",
-    tech: ["Next.js", "Prisma", "PostgreSQL", "Socket.io"],
-    link: "#",
+      "Built a React + Node.js workflow automation platform with drag-and-drop canvas, supporting 6+ node types for triggers and actions. Integrated Ethereum and Solana blockchain wallets with Uniswap V3 and Raydium SDK for automated token swaps. Developed executor service with 10s polling, Resend email automation, and real-time execution dashboard with status tracking.",
+    tech: ["React", "Node.js", "MongoDB", "Database TypeScript", "ReactFlow", "ethers.js", "@solana/web3.js", "Express"],
+    link: "https://github.com/yourusername/n8nWeb3",
   },
   {
-    title: "Design System",
+    title: "OpsCode Blog",
     description:
-      "A comprehensive design system with reusable components, documentation, and design tokens for consistent UI development.",
-    tech: ["React", "Storybook", "Figma", "CSS"],
-    link: "#",
+      "Developed a full-stack blogging platform enabling users to create, share, and interact with posts. Boosted retention by integrating comments, social sharing, and an intuitive React/Tailwind UI. Optimized backend using Prisma and Cloudflare Workers for performance and scalability.",
+    tech: ["Javascript", "TypeScript", "React.js", "Hono", "MongoDB", "Prisma", "Tailwind", "Cloudflare Workers"],
+    link: "https://opscode.blog",
   },
 ];
 
