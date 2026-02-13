@@ -89,21 +89,21 @@ const projects: Project[] = [
     description:
       "Built a Web3 wallet app enabling multi-wallet management with secure key phrase generation. Integrated JSON-RPC and Solana Web3.js for real-time balances and key pair generation. Implemented BIP39 mnemonic-to-seed and ED25519 derivation for strong cryptographic security.",
     tech: ["Javascript", "React.js", "JSON-RPC", "Solana Web3.js", "BIP39", "ED25519", "TweetNacl"],
-    link: "https://github.com/yourusername/n8nWeb3",
+    link: "https://wallet-interaction-playground.vercel.app/",
   },
   {
     title: "n8nWeb3",
     description:
       "Built a React + Node.js workflow automation platform with drag-and-drop canvas, supporting 6+ node types for triggers and actions. Integrated Ethereum and Solana blockchain wallets with Uniswap V3 and Raydium SDK for automated token swaps. Developed executor service with 10s polling, Resend email automation, and real-time execution dashboard with status tracking.",
     tech: ["React", "Node.js", "MongoDB", "Database TypeScript", "ReactFlow", "ethers.js", "@solana/web3.js", "Express"],
-    link: "https://github.com/yourusername/n8nWeb3",
+    link: "https://github.com/ddddsssss4/n8n_web3",
   },
   {
     title: "OpsCode Blog",
     description:
       "Developed a full-stack blogging platform enabling users to create, share, and interact with posts. Boosted retention by integrating comments, social sharing, and an intuitive React/Tailwind UI. Optimized backend using Prisma and Cloudflare Workers for performance and scalability.",
     tech: ["Javascript", "TypeScript", "React.js", "Hono", "MongoDB", "Prisma", "Tailwind", "Cloudflare Workers"],
-    link: "https://opscode.blog",
+    link: "https://ops-codeblog.vercel.app/",
   },
 ];
 
