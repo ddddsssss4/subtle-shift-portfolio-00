@@ -28,7 +28,7 @@ const Index = () => {
         </div>
         
         <footer className="max-w-4xl mx-auto px-6 py-12 text-center animate-emerge" style={{ animationDelay: "1.3s" }}>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm md:text-base text-muted-foreground">
             © 2026 @OpsCode. Built with great taste in minimalism.
           </p>
         </footer>

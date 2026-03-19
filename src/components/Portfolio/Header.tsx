@@ -13,7 +13,7 @@ export function Header() {
           <p className="text-lg font-light">
           Web3 Full Stack Developer & <span className="text-pink-500"> Designer</span>
           </p>
-          <p className="text-sm text-muted-foreground max-w-md mx-auto leading-relaxed">
+          <p className="text-sm md:text-base text-muted-foreground max-w-md mx-auto leading-relaxed">
             Building digital experiences with clean code and thoughtful design. 
             Focused on creating meaningful and accessible web applications.
           </p>

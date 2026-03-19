@@ -303,7 +303,7 @@ export function Projects() {
                     <h3 className="text-xl font-medium mb-3">
                       {project.title}
                     </h3>
-                    <p className="text-muted-foreground  mb-4 leading-relaxed">
+                    <p className="text-sm md:text-base text-muted-foreground mb-4 leading-relaxed">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">

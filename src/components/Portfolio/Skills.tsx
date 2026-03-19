@@ -139,7 +139,7 @@ export function Skills() {
                   <CarouselContent className="justify-center gap-2">
                     {category.skills.map((skill) => (
                       <CarouselItem key={skill} className="px-1 basis-auto">
-                        <div className="py-2 px-4 bg-surface/70 rounded-md text-sm font-medium text-foreground border border-border hover-lift whitespace-nowrap flex items-center">
+                        <div className="py-2 px-4 bg-surface/70 rounded-md text-sm md:text-base font-medium text-foreground border border-border hover-lift whitespace-nowrap flex items-center">
                           <TechIcon name={skill} />
                           <span className="align-middle">{skill}</span>
                         </div>

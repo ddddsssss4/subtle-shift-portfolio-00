@@ -73,7 +73,7 @@ export function Experience() {
                   </div>
                 </div>
                 <p className="text-secondary font-medium mb-3">{exp.company}</p>
-                <div className="text-muted-foreground leading-relaxed">
+                <div className="text-sm md:text-base text-muted-foreground leading-relaxed">
                   <ul className="list-disc list-inside space-y-1">
                     {exp.description.map((line, i) => (
                       <li key={i}>{line}</li>
