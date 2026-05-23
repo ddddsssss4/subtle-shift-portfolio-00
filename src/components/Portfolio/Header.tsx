@@ -2,8 +2,8 @@ export function Header() {
   return (
     <header className="max-w-4xl mx-auto px-6 pt-16 pb-8">
       <div className="animate-fade-in">
-        <div className="w-32 h-32 mx-auto mb-8 bg-surface rounded-full flex items-center justify-center border border-border hover-lift">
-          <img alt="YN" src="https://media.licdn.com/dms/image/v2/D4D03AQEjoId_HlASNA/profile-displayphoto-scale_400_400/B4DZq1dc5oIMAg-/0/1763980989666?e=1772668800&v=beta&t=Jk3mT4ouj52ZE8Y-IXjhrxQfyUARilGQ3tpeCr6BNh4" />
+        <div className="w-32 h-32 mx-auto mb-8 bg-surface rounded-full flex items-center justify-center border border-border hover-lift overflow-hidden">
+          <img alt="OpsCode" src="/Portfolio.jpeg" className="w-full h-full object-cover rounded-full" />
         </div>
         
         <div className="text-center space-y-4">
