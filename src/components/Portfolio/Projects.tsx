@@ -2,7 +2,7 @@ import { GlowCard } from "@/components/ui/GlowCard";
 
 interface Project {
   title: string;
-  description: string;
+  description: string[];
   tech: string[];
   link?: string;
 }
@@ -184,8 +184,11 @@ function TechIcon({ tech, size = 16 }: { tech: string; size?: number }) {
 const projects: Project[] = [
   {
     title: "PrepedAI",
-    description:
-      "Engineered an AI-driven system design architect using a Next.js/Express monorepo. Bypassed unpredictable LLM output structures by implementing a custom, on-the-fly JSON auto-repair engine that parses streamed Server-Sent Events (SSE) from a local LM Studio instance into structured data arrays. Built an interactive, Zustand-managed frontend that dynamically compiles the sanitized streams into live Mermaid.js architecture diagrams and multi-phase implementation blueprints.",
+    description: [
+      "Engineered an AI-driven system design architect using a Next.js/Express monorepo.",
+      "Bypassed unpredictable LLM output structures by implementing a custom, on-the-fly JSON auto-repair engine that parses streamed Server-Sent Events (SSE) from a local LM Studio instance into structured data arrays.",
+      "Built an interactive, Zustand-managed frontend that dynamically compiles the sanitized streams into live Mermaid.js architecture diagrams and multi-phase implementation blueprints."
+    ],
     tech: [
       "Next.js",
       "React",
@@ -203,8 +206,11 @@ const projects: Project[] = [
   },
   {
     title: "n8nWeb3",
-    description:
-      "Built a React + Node.js workflow automation platform with drag-and-drop canvas, supporting 6+ node types for triggers and actions. Integrated Ethereum and Solana blockchain wallets with Uniswap V3 and Raydium SDK for automated token swaps. Developed executor service with 10s polling, Resend email automation, and real-time execution dashboard with status tracking.",
+    description: [
+      "Built a React + Node.js workflow automation platform with drag-and-drop canvas, supporting 6+ node types for triggers and actions.",
+      "Integrated Ethereum and Solana blockchain wallets with Uniswap V3 and Raydium SDK for automated token swaps.",
+      "Developed executor service with 10s polling, Resend email automation, and real-time execution dashboard with status tracking."
+    ],
     tech: [
       "React",
       "Node.js",
@@ -219,8 +225,11 @@ const projects: Project[] = [
   },
   {
     title: "Sumzit",
-    description:
-      "Built a Next.js AI platform that extracts YouTube transcripts, bypassing API blocks via a custom Android innertube fetcher. Integrated local LLM inference using LM Studio, parsing raw Server-Sent Events (SSE) to stream real-time structured markdown summaries. Developed a robust Mermaid.js rendering engine with syntax auto-sanitization for tree-style flowcharts, packaged in a highly optimized 100MB multi-stage Docker container.",
+    description: [
+      "Built a Next.js AI platform that extracts YouTube transcripts, bypassing API blocks via a custom Android innertube fetcher.",
+      "Integrated local LLM inference using LM Studio, parsing raw Server-Sent Events (SSE) to stream real-time structured markdown summaries.",
+      "Developed a robust Mermaid.js rendering engine with syntax auto-sanitization for tree-style flowcharts, packaged in a highly optimized 100MB multi-stage Docker container."
+    ],
     tech: [
       "Next.js",
       "TypeScript",
@@ -236,22 +245,30 @@ const projects: Project[] = [
   
   {
     title: "Snappy",
-    description: "Built a TypeScript CLI utility using Oclif that generates highly customizable code snapshots, drastically reducing the installation footprint by dynamically resolving the host system's Chromium executable via Puppeteer-core. Integrated Shiki for deep syntax highlighting, extracting underlying theme tokens to dynamically style translucent CSS glassmorphism components. Developed a robust multi-file vertical stacking engine and implemented automated DOM evaluation to dynamically scale the browser viewport, preventing visual clipping on large scripts.",
+    description: [
+      "Built a TypeScript CLI utility using Oclif that generates highly customizable code snapshots, drastically reducing the installation footprint by dynamically resolving the host system's Chromium executable via Puppeteer-core.",
+      "Integrated Shiki for deep syntax highlighting, extracting underlying theme tokens to dynamically style translucent CSS glassmorphism components.",
+      "Developed a robust multi-file vertical stacking engine and implemented automated DOM evaluation to dynamically scale the browser viewport, preventing visual clipping on large scripts."
+    ],
     tech: [
-    "TypeScript",
-   "Node.js",
-   "Oclif",
-   "Puppeteer",
-   "Shiki",
+      "TypeScript",
+      "Node.js",
+      "Oclif",
+      "Puppeteer",
+      "Shiki",
       "CSS",
-   "Next.JS"],
-    link:"https://github.com/ddddsssss4/snappy",
+      "Next.JS"
+    ],
+    link: "https://github.com/ddddsssss4/snappy",
   },
   
   {
     title: "Web3 Wallet Management App",
-    description:
-      "Built a Web3 wallet app enabling multi-wallet management with secure key phrase generation. Integrated JSON-RPC and Solana Web3.js for real-time balances and key pair generation. Implemented BIP39 mnemonic-to-seed and ED25519 derivation for strong cryptographic security.",
+    description: [
+      "Built a Web3 wallet app enabling multi-wallet management with secure key phrase generation.",
+      "Integrated JSON-RPC and Solana Web3.js for real-time balances and key pair generation.",
+      "Implemented BIP39 mnemonic-to-seed and ED25519 derivation for strong cryptographic security."
+    ],
     tech: [
       "Javascript",
       "React.js",
@@ -266,8 +283,11 @@ const projects: Project[] = [
   
   {
     title: "OpsCode Blog",
-    description:
-      "Developed a full-stack blogging platform enabling users to create, share, and interact with posts. Boosted retention by integrating comments, social sharing, and an intuitive React/Tailwind UI. Optimized backend using Prisma and Cloudflare Workers for performance and scalability.",
+    description: [
+      "Developed a full-stack blogging platform enabling users to create, share, and interact with posts.",
+      "Boosted retention by integrating comments, social sharing, and an intuitive React/Tailwind UI.",
+      "Optimized backend using Prisma and Cloudflare Workers for performance and scalability."
+    ],
     tech: [
       "Javascript",
       "TypeScript",
@@ -303,9 +323,13 @@ export function Projects() {
                     <h3 className="text-xl font-medium mb-3">
                       {project.title}
                     </h3>
-                    <p className="text-sm md:text-base text-muted-foreground mb-4 leading-relaxed">
-                      {project.description}
-                    </p>
+                    <div className="text-sm md:text-base text-muted-foreground mb-4 leading-relaxed">
+                      <ul className="list-disc list-inside space-y-1">
+                        {project.description.map((line, i) => (
+                          <li key={i}>{line}</li>
+                        ))}
+                      </ul>
+                    </div>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tech.map((tech) => {
                         const trimmed = tech.trim();
