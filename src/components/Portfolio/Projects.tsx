@@ -59,6 +59,9 @@ const ICON_SLUGS: Record<string, string> = {
   "Qwen AI":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAn1BMVEVHcExHOud5cO9iL+WZie9fS+tgTutLR+ZhVu2FevBbR+p8dfBbUu1fJOSTkPNsYu5fVexVJuZoWeygnvWGgvFiNuVhPudhVez///9hNOZgSuqxpvRhUOtePOhhROl7cO9ZJeX9/f9ZR+tzZe5rX+16WuqomfLy7/2ekfKTee3SzPnAuPa3sfbj4vzd2PpSNun49/5mU+vr5vxUFOTMxPepwbKqAAAAGHRSTlMAE7z57TiICv3+pewjuvtfzmzinNTf98REC/sNAAABU0lEQVQoka2SWZOCMBCEgRIJrHjtNYQkhHCDXOr//207qOBq4cNWbfOWj4HunmjaP2hpGMbmBTP9IAoCfR7uoWRxZGjWoCe2OwPYfRy9oRbr9wdm2QBH2vdxjN+27bU5EV23nBogaJWijFz4x8g2ge/nGWSpf9EBVa1XN0jiDkIffqszxnxE5QDnKgvvMB0Ht4Qo/GMhElQURXae5/spPSE0QK/S8zjnoi3ruq6WI3UIazFlPlDBUwjxscceLMJojyfeMCpC6DBz7UyVM8rRbXXyPFkB+G2JlqYa9kzwDMJEeglAJmjcNOX2xlaMCl4AlFI2aJtTqpQaLX0P8NTgKL7RSEEpY2QcRENBmh4gKzKAhIuBTmvfshZPIWwGV5ILx9LvSzfV4VpaBx3G+XrctbO4CCtOsYnd0z243g33eMSon9qs9KLAQXMeajvXdZcv2J/0Az/6Kq8slQAfAAAAAElFTkSuQmCC",
   Tailwind: "tailwindcss",
   "Cloudflare Workers": "cloudflare",
+  Solana: "solana",
+  Rust: "rust",
+  Turborepo: "turborepo",
   // Example of how you could put a direct URL for an icon not present on simpleicons:
   // "My Custom Icon": "https://example.com/path/to/icon.svg",
 };
@@ -182,6 +185,28 @@ function TechIcon({ tech, size = 16 }: { tech: string; size?: number }) {
 }
 
 const projects: Project[] = [
+  {
+    title: "ChordChain",
+    description: [
+      "Built a decentralized music collaboration platform where contributor agreements are finalized immutably on the Solana blockchain, preventing royalty disputes.",
+      "Anchor smart contract (Rust) with atomic payment distribution: all contributors paid in a single transaction or none.",
+      "Full-stack TypeScript: Next.js 14 frontend, Privy email auth + embedded wallets, Express backend.",
+      "PostgreSQL + Prisma for off-chain state; Solana PDAs for immutable on-chain records.",
+      "Sophisticated transaction flows: unsigned server-side builds, client-side Privy signing, on-chain confirmation.",
+      "Monorepo optimization (Turborepo + Bun) with comprehensive testing."
+    ],
+    tech: [
+      "Solana",
+      "Anchor",
+      "Rust",
+      "Next.js",
+      "TypeScript",
+      "Express",
+      "PostgreSQL",
+      "Privy",
+      "Turborepo"
+    ]
+  },
   {
     title: "PrepedAI",
     description: [
