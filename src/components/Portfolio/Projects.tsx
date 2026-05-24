@@ -5,6 +5,7 @@ interface Project {
   description: string[];
   tech: string[];
   link?: string;
+  demoLink?: string;
 }
 
 /**
@@ -62,6 +63,9 @@ const ICON_SLUGS: Record<string, string> = {
   Solana: "solana",
   Rust: "rust",
   Turborepo: "turborepo",
+  Anchor: "https://www.anchor-lang.com/_next/image?url=%2Ficons%2Fanchor.png&w=32&q=75",
+  Privy: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzj-eBN5t8yQJCe-dER41ijvEGAvKgu8_tIQ&s",
+  "Gemini API": "googlegemini",
   // Example of how you could put a direct URL for an icon not present on simpleicons:
   // "My Custom Icon": "https://example.com/path/to/icon.svg",
 };
@@ -186,6 +190,27 @@ function TechIcon({ tech, size = 16 }: { tech: string; size?: number }) {
 
 const projects: Project[] = [
   {
+    title: "AmazonAI",
+    description: [
+      "🏆 Built for ElevenLabs x v0 Hackathon.",
+      "Engineered an agentic AI system with 8 custom voice tools for fully voice-controlled shopping, search, and multi-field checkout flows.",
+      "Implemented context-aware pronoun resolution maintaining a stateful product reference across turns for natural conversation.",
+      "Built robust disambiguation logic that dynamically prompts the user when multiple products match a search query.",
+      "Designed a secure Express backend using time-limited signed URLs to shield ElevenLabs API keys from the client.",
+      "Developed advanced state management with multi-turn checkout context preservation and real-time tool call debugging panels."
+    ],
+    tech: [
+      "React",
+      "TypeScript",
+      "Bun",
+      "Express",
+      "ElevenLabs API",
+      "Tailwind CSS",
+      "WebSocket"
+    ],
+    link: "https://github.com/ddddsssss4/AmazonAI"
+  },
+  {
     title: "ChordChain",
     description: [
       "Built a decentralized music collaboration platform where contributor agreements are finalized immutably on the Solana blockchain, preventing royalty disputes.",
@@ -205,7 +230,31 @@ const projects: Project[] = [
       "PostgreSQL",
       "Privy",
       "Turborepo"
-    ]
+    ],
+    link: "https://github.com/ddddsssss4/ChordChain",
+    demoLink: "https://x.com/OpsCode3/status/2028233248896360659/video/1"
+  },
+  {
+    title: "Curalz",
+    description: [
+      "🏆 Won Hackathon for best healthtech innovation and social impact.",
+      "Engineered vector embedding and semantic search system using Gemini embeddings (768 dimensions) and Qdrant vector database for concept-based memory retrieval.",
+      "Implemented dual-role backend architecture with JWT authentication and role-based access control (RBAC) to isolate caregiver and patient data access.",
+      "Built an asynchronous job queue (BullMQ + Redis) for embedding generation to separate heavy computation from API response times.",
+      "Developed custom entity extraction engine using Gemini AI with a robust regex fallback system for resilient data parsing.",
+      "Designed production patterns: Express.js REST API with Swagger documentation, bcrypt password hashing, Bull Board dashboard monitoring, and cron-based patient check-ins."
+    ],
+    tech: [
+      "Node.js",
+      "Express",
+      "TypeScript",
+      "MongoDB",
+      "Qdrant",
+      "BullMQ",
+      "Redis",
+      "Gemini API"
+    ],
+    link: "https://github.com/ddddsssss4/curalz"
   },
   {
     title: "PrepedAI",
@@ -371,14 +420,28 @@ export function Projects() {
                     </div>
                   </div>
 
-                  {project.link && (
-                    <div className="flex-shrink-0">
-                      <a
-                        href={project.link}
-                        className="inline-flex items-center text-sm font-medium text-primary hover:text-secondary transition-colors duration-200"
-                      >
-                        View Project →
-                      </a>
+                  {(project.link || project.demoLink) && (
+                    <div className="w-full md:w-auto flex md:flex-col justify-between items-center md:items-end md:self-stretch pt-1 pb-1">
+                      {project.link && (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center text-sm font-medium text-primary hover:text-secondary transition-colors duration-200"
+                        >
+                          View Project →
+                        </a>
+                      )}
+                      {project.demoLink && (
+                        <a
+                          href={project.demoLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center text-sm font-medium text-pink-500 hover:text-pink-600 transition-colors duration-200"
+                        >
+                          Watch Video ↗
+                        </a>
+                      )}
                     </div>
                   )}
                 </div>
